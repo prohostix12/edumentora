@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --color-primary: #E31E24;
+  --color-primary-dark: #B91318;
+  --color-secondary: #252A6C;
+  --color-accent: #F59E0B;
+  --color-success: #10B981;
+  --color-bg-section: #FBF9F9;
+  --color-border: #EFE4E4;
+  --color-heading: #252A6C;
+  --color-paragraph: #4B4E6D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  color: #4B4E6D;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+  color: #252A6C;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(37, 42, 108, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #E31E24 0%, #B91318 50%, #252A6C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #E31E24 0%, #B91318 100%);
+}
+
+.gradient-bg-hero {
+  background: linear-gradient(135deg, #FFF5F5 0%, #FDEAEA 50%, #F4F5FB 100%);
+}
+
+.gradient-bg-warm {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 24px rgba(37, 42, 108, 0.08);
+}
+
+.shadow-card {
+  box-shadow: 0 8px 32px rgba(37, 42, 108, 0.1);
+}
+
+.shadow-hover {
+  box-shadow: 0 20px 48px rgba(37, 42, 108, 0.15);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.animate-float-delay-2 {
+  animation: float 6s ease-in-out 4s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.swiper-pagination-bullet {
+  background: #E31E24 !important;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 24px !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
